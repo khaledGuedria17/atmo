@@ -372,7 +372,7 @@ class _DetailsWidgetState extends State<DetailsWidget> {
                                             highlightColor: Colors.transparent,
                                             onTap: () async {
                                               await launchURL(
-                                                  'https://bn1f98vv-3000.euw.devtunnels.ms/details?name=${widget!.currentProject?.name}');
+                                                  'http://localhost:3000/details?name=${widget!.currentProject?.name}');
                                             },
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,

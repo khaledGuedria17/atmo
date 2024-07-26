@@ -551,11 +551,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': '',
       'fr': '',
     },
-    'c133j4mx': {
-      'en': 'Holder Address',
-      'es': '',
-      'fr': '',
-    },
     'pgawtrrn': {
       'en': 'Reward',
       'es': '',

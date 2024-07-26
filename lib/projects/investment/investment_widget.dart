@@ -177,7 +177,7 @@ class _InvestmentWidgetState extends State<InvestmentWidget> {
                                                   Colors.transparent,
                                               onTap: () async {
                                                 await launchURL(
-                                                    'https://bn1f98vv-3000.euw.devtunnels.ms/holdings?name=${transactionProjectRecord.name}');
+                                                    'http://localhost:3000/holdings?name=${transactionProjectRecord.name}');
                                               },
                                               child: Container(
                                                 width:

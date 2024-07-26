@@ -12,6 +12,7 @@ import 'package:styled_divider/styled_divider.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -729,45 +730,86 @@ class _CheckoutVerificationWidgetState
                                                     child: Padding(
                                                       padding:
                                                           EdgeInsets.all(5.0),
-                                                      child: Row(
-                                                        mainAxisSize:
-                                                            MainAxisSize.max,
-                                                        mainAxisAlignment:
-                                                            MainAxisAlignment
-                                                                .spaceBetween,
-                                                        children: [
-                                                          Icon(
-                                                            FFIcons.kwallet,
-                                                            color: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .secondaryText,
-                                                            size: 24.0,
-                                                          ),
-                                                          Text(
-                                                            FFLocalizations.of(
-                                                                    context)
-                                                                .getText(
-                                                              'c133j4mx' /* Holder Address */,
-                                                            ),
-                                                            style: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .labelSmall
-                                                                .override(
-                                                                  fontFamily:
-                                                                      'Plus Jakarta Sans',
-                                                                  letterSpacing:
-                                                                      0.0,
+                                                      child: InkWell(
+                                                        splashColor:
+                                                            Colors.transparent,
+                                                        focusColor:
+                                                            Colors.transparent,
+                                                        hoverColor:
+                                                            Colors.transparent,
+                                                        highlightColor:
+                                                            Colors.transparent,
+                                                        onTap: () async {
+                                                          await Clipboard.setData(
+                                                              ClipboardData(
+                                                                  text: widget!
+                                                                      .currentProject!
+                                                                      .petraAddress));
+                                                          ScaffoldMessenger.of(
+                                                                  context)
+                                                              .showSnackBar(
+                                                            SnackBar(
+                                                              content: Text(
+                                                                'Developer Address copied to clipboad',
+                                                                style:
+                                                                    TextStyle(
+                                                                  color: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .info,
                                                                 ),
-                                                          ),
-                                                          Icon(
-                                                            Icons
-                                                                .content_copy_rounded,
-                                                            color: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .secondary,
-                                                            size: 24.0,
-                                                          ),
-                                                        ],
+                                                              ),
+                                                              duration: Duration(
+                                                                  milliseconds:
+                                                                      4000),
+                                                              backgroundColor:
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .secondary,
+                                                            ),
+                                                          );
+                                                        },
+                                                        child: Row(
+                                                          mainAxisSize:
+                                                              MainAxisSize.max,
+                                                          mainAxisAlignment:
+                                                              MainAxisAlignment
+                                                                  .spaceBetween,
+                                                          children: [
+                                                            Icon(
+                                                              FFIcons.kwallet,
+                                                              color: FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .secondaryText,
+                                                              size: 24.0,
+                                                            ),
+                                                            Text(
+                                                              valueOrDefault<
+                                                                  String>(
+                                                                widget!
+                                                                    .currentProject
+                                                                    ?.petraAddress,
+                                                                'No address',
+                                                              ),
+                                                              style: FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .labelSmall
+                                                                  .override(
+                                                                    fontFamily:
+                                                                        'Plus Jakarta Sans',
+                                                                    letterSpacing:
+                                                                        0.0,
+                                                                  ),
+                                                            ),
+                                                            Icon(
+                                                              Icons
+                                                                  .content_copy_rounded,
+                                                              color: FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .secondary,
+                                                              size: 24.0,
+                                                            ),
+                                                          ],
+                                                        ),
                                                       ),
                                                     ),
                                                   ),
@@ -936,7 +978,7 @@ class _CheckoutVerificationWidgetState
                                                               isVerified: true,
                                                             ));
                                                             await launchURL(
-                                                                'https://bn1f98vv-3000.euw.devtunnels.ms/authorize');
+                                                                'http://localhost:3000/authorize');
                                                             await showModalBottomSheet(
                                                               isScrollControlled:
                                                                   true,

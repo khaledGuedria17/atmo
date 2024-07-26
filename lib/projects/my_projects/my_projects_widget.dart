@@ -238,7 +238,7 @@ class _MyProjectsWidgetState extends State<MyProjectsWidget> {
                                                       .isVerified ==
                                                   true) {
                                                 await launchURL(
-                                                    'https://bn1f98vv-3000.euw.devtunnels.ms/create?name=${listViewProjectRecord.name}');
+                                                    'http://localhost:3000/create?name=${listViewProjectRecord.name}');
                                               } else {
                                                 await showDialog(
                                                   context: context,

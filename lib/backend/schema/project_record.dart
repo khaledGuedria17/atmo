@@ -117,6 +117,11 @@ class ProjectRecord extends FirestoreRecord {
   String get verraId => _verraId ?? '';
   bool hasVerraId() => _verraId != null;
 
+  // "petra_address" field.
+  String? _petraAddress;
+  String get petraAddress => _petraAddress ?? '';
+  bool hasPetraAddress() => _petraAddress != null;
+
   void _initializeFields() {
     _name = snapshotData['name'] as String?;
     _projectType = snapshotData['project_type'] as DocumentReference?;
@@ -138,6 +143,7 @@ class ProjectRecord extends FirestoreRecord {
     _premiumPublish = snapshotData['premiumPublish'] as bool?;
     _isVerified = snapshotData['isVerified'] as bool?;
     _verraId = snapshotData['VERRA_ID'] as String?;
+    _petraAddress = snapshotData['petra_address'] as String?;
   }
 
   static CollectionReference get collection =>
@@ -193,6 +199,7 @@ Map<String, dynamic> createProjectRecordData({
   bool? premiumPublish,
   bool? isVerified,
   String? verraId,
+  String? petraAddress,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
@@ -214,6 +221,7 @@ Map<String, dynamic> createProjectRecordData({
       'premiumPublish': premiumPublish,
       'isVerified': isVerified,
       'VERRA_ID': verraId,
+      'petra_address': petraAddress,
     }.withoutNulls,
   );
 
@@ -245,7 +253,8 @@ class ProjectRecordDocumentEquality implements Equality<ProjectRecord> {
         e1?.allTimeEstimatedACU == e2?.allTimeEstimatedACU &&
         e1?.premiumPublish == e2?.premiumPublish &&
         e1?.isVerified == e2?.isVerified &&
-        e1?.verraId == e2?.verraId;
+        e1?.verraId == e2?.verraId &&
+        e1?.petraAddress == e2?.petraAddress;
   }
 
   @override
@@ -269,7 +278,8 @@ class ProjectRecordDocumentEquality implements Equality<ProjectRecord> {
         e?.allTimeEstimatedACU,
         e?.premiumPublish,
         e?.isVerified,
-        e?.verraId
+        e?.verraId,
+        e?.petraAddress
       ]);
 
   @override

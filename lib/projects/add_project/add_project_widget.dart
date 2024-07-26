@@ -3452,6 +3452,9 @@ Description */
                                                             verraId: _model
                                                                 .userNameTextFieldTextController1
                                                                 .text,
+                                                            petraAddress: _model
+                                                                .textController6
+                                                                .text,
                                                           ),
                                                           ...mapToFirestore(
                                                             {
