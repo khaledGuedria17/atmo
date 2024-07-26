@@ -18,18 +18,21 @@ By merging sustainability with blockchain technology, the Sustainable Projects R
 
 ## Getting Started
 
-To get started with the Sustainable Projects Registry, please follow these steps:
+To get started with the ATMO, please follow these steps:
+
+ATMO is developed on micro-frontend architecture, A react web app is designed to communicate with the Aptos blockchain to assure the key features above. The Flutter Web is for all the other components in the project. Make sure to start by the [React Web App](https://gitlab.com/mourad.aouini/fractured-nft-smart-contract-atmos/-/tree/reactapp?ref_type=heads)
+
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/your-username/sustainable-projects-registry.git
+   git clone https://github.com/khaledGuedria17/atmo.git
    ```
 
 2. **Install Dependencies:**
    Navigate to the project directory and install the required dependencies:
    ```bash
-   cd sustainable-projects-registry
-   npm install
+   cd atmo-flutterflow
+   flutter pub get
    ```
 
 3. **Configuration:**
@@ -38,11 +41,11 @@ To get started with the Sustainable Projects Registry, please follow these steps
 4. **Run the Application:**
    Start the application using the following command:
    ```bash
-   npm start
+   flutter run -d chrome
    ```
 
 5. **Access the Platform:**
-   Open your web browser and navigate to `http://localhost:3000` to access the platform.
+   A chrome window will pop within a random port to access the Flutter Web App
 
 ## Contributing
 
@@ -54,7 +57,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 
-For any inquiries or support, please contact us at [support@sustainableprojectsregistry.org](mailto:support@sustainableprojectsregistry.org).
+For any inquiries or support, please contact us at [khaled.guedria@esprit.tn](mailto:khaled.guedria@esprit.tn).
 
 ---
 
