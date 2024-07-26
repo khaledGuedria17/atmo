@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "796361003597",
+    "project_id": "atmo-pw0qrq",
+    "storage_bucket": "atmo-pw0qrq.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:796361003597:android:ac644de7fa659d4e3f0204",
+        "android_client_info": {
+          "package_name": "tn.esprit.atmo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQdAJIwFYb_ZbjRFw0HfM7T8XX81ZJHjU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
