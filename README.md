@@ -59,6 +59,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 For any inquiries or support, please contact us at [khaled.guedria@esprit.tn](mailto:khaled.guedria@esprit.tn).
 
----
-
-Feel free to adjust the repository URL, configuration details, or contact information as needed.
