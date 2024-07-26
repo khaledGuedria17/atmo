@@ -635,85 +635,6 @@ class _DetailsWidgetState extends State<DetailsWidget> {
                                                 child: Text(
                                                   FFLocalizations.of(context)
                                                       .getText(
-                                                    'q69v5nti' /* Status */,
-                                                  ),
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
-                                                      .labelLarge
-                                                      .override(
-                                                        fontFamily:
-                                                            'Plus Jakarta Sans',
-                                                        color:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .primaryText,
-                                                        fontSize: 16.0,
-                                                        letterSpacing: 0.0,
-                                                        fontWeight:
-                                                            FontWeight.bold,
-                                                      ),
-                                                ),
-                                              ),
-                                              Flexible(
-                                                child:
-                                                    StreamBuilder<StatusRecord>(
-                                                  stream:
-                                                      StatusRecord.getDocument(
-                                                          widget!
-                                                              .currentProject!
-                                                              .status!),
-                                                  builder: (context, snapshot) {
-                                                    // Customize what your widget looks like when it's loading.
-                                                    if (!snapshot.hasData) {
-                                                      return Center(
-                                                        child: SizedBox(
-                                                          width: 40.0,
-                                                          height: 40.0,
-                                                          child:
-                                                              SpinKitFadingGrid(
-                                                            color: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .primary,
-                                                            size: 40.0,
-                                                          ),
-                                                        ),
-                                                      );
-                                                    }
-
-                                                    final textStatusRecord =
-                                                        snapshot.data!;
-
-                                                    return Text(
-                                                      textStatusRecord.name,
-                                                      style:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .labelLarge
-                                                              .override(
-                                                                fontFamily:
-                                                                    'Plus Jakarta Sans',
-                                                                color: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .secondaryText,
-                                                                fontSize: 14.0,
-                                                                letterSpacing:
-                                                                    0.0,
-                                                              ),
-                                                    );
-                                                  },
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                          Row(
-                                            mainAxisSize: MainAxisSize.max,
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceBetween,
-                                            children: [
-                                              Flexible(
-                                                child: Text(
-                                                  FFLocalizations.of(context)
-                                                      .getText(
                                                     'gmc1eghx' /* Crediting Period */,
                                                   ),
                                                   style: FlutterFlowTheme.of(
@@ -882,94 +803,108 @@ class _DetailsWidgetState extends State<DetailsWidget> {
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           20.0, 0.0, 20.0, 0.0),
-                                      child: StreamBuilder<
-                                          List<CreditingPeriodRecord>>(
-                                        stream: queryCreditingPeriodRecord(),
-                                        builder: (context, snapshot) {
-                                          // Customize what your widget looks like when it's loading.
-                                          if (!snapshot.hasData) {
-                                            return Center(
-                                              child: SizedBox(
-                                                width: 40.0,
-                                                height: 40.0,
-                                                child: SpinKitFadingGrid(
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .primary,
-                                                  size: 40.0,
-                                                ),
-                                              ),
-                                            );
-                                          }
-                                          List<CreditingPeriodRecord>
-                                              listViewCreditingPeriodRecordList =
-                                              snapshot.data!;
+                                      child: Builder(
+                                        builder: (context) {
+                                          final periods = widget!.currentProject
+                                                  ?.credetingPeriods
+                                                  ?.toList() ??
+                                              [];
 
                                           return ListView.separated(
                                             padding: EdgeInsets.zero,
                                             shrinkWrap: true,
                                             scrollDirection: Axis.vertical,
-                                            itemCount:
-                                                listViewCreditingPeriodRecordList
-                                                    .length,
+                                            itemCount: periods.length,
                                             separatorBuilder: (_, __) =>
                                                 SizedBox(height: 10.0),
                                             itemBuilder:
-                                                (context, listViewIndex) {
-                                              final listViewCreditingPeriodRecord =
-                                                  listViewCreditingPeriodRecordList[
-                                                      listViewIndex];
-                                              return Row(
-                                                mainAxisSize: MainAxisSize.max,
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment
-                                                        .spaceBetween,
-                                                children: [
-                                                  Text(
-                                                    '${dateTimeFormat(
-                                                      'yMd',
-                                                      listViewCreditingPeriodRecord
-                                                          .creditingStart,
-                                                      locale:
-                                                          FFLocalizations.of(
-                                                                  context)
-                                                              .languageCode,
-                                                    )} - ${dateTimeFormat(
-                                                      'yMd',
-                                                      listViewCreditingPeriodRecord
-                                                          .creditingEnd,
-                                                      locale:
-                                                          FFLocalizations.of(
-                                                                  context)
-                                                              .languageCode,
-                                                    )}',
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily:
-                                                              'Plus Jakarta Sans',
-                                                          letterSpacing: 0.0,
-                                                        ),
-                                                  ),
-                                                  Text(
-                                                    listViewCreditingPeriodRecord
-                                                        .acu
-                                                        .toString(),
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily:
-                                                              'Plus Jakarta Sans',
+                                                (context, periodsIndex) {
+                                              final periodsItem =
+                                                  periods[periodsIndex];
+                                              return StreamBuilder<
+                                                  CreditingPeriodRecord>(
+                                                stream: CreditingPeriodRecord
+                                                    .getDocument(periodsItem),
+                                                builder: (context, snapshot) {
+                                                  // Customize what your widget looks like when it's loading.
+                                                  if (!snapshot.hasData) {
+                                                    return Center(
+                                                      child: SizedBox(
+                                                        width: 40.0,
+                                                        height: 40.0,
+                                                        child:
+                                                            SpinKitFadingGrid(
                                                           color: FlutterFlowTheme
                                                                   .of(context)
                                                               .primary,
-                                                          fontSize: 16.0,
-                                                          letterSpacing: 0.0,
+                                                          size: 40.0,
                                                         ),
-                                                  ),
-                                                ],
+                                                      ),
+                                                    );
+                                                  }
+
+                                                  final rowCreditingPeriodRecord =
+                                                      snapshot.data!;
+
+                                                  return Row(
+                                                    mainAxisSize:
+                                                        MainAxisSize.max,
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment
+                                                            .spaceBetween,
+                                                    children: [
+                                                      Text(
+                                                        '${dateTimeFormat(
+                                                          'yMd',
+                                                          rowCreditingPeriodRecord
+                                                              .creditingStart,
+                                                          locale:
+                                                              FFLocalizations.of(
+                                                                      context)
+                                                                  .languageCode,
+                                                        )} - ${dateTimeFormat(
+                                                          'yMd',
+                                                          rowCreditingPeriodRecord
+                                                              .creditingEnd,
+                                                          locale:
+                                                              FFLocalizations.of(
+                                                                      context)
+                                                                  .languageCode,
+                                                        )}',
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'Plus Jakarta Sans',
+                                                                  letterSpacing:
+                                                                      0.0,
+                                                                ),
+                                                      ),
+                                                      Text(
+                                                        rowCreditingPeriodRecord
+                                                            .acu
+                                                            .toString(),
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'Plus Jakarta Sans',
+                                                                  color: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .primary,
+                                                                  fontSize:
+                                                                      16.0,
+                                                                  letterSpacing:
+                                                                      0.0,
+                                                                ),
+                                                      ),
+                                                    ],
+                                                  );
+                                                },
                                               );
                                             },
                                           );

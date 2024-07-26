@@ -1900,10 +1900,11 @@ Description */
                                                                     0.0,
                                                                     0.0),
                                                         child: Text(
-                                                          FFLocalizations.of(
-                                                                  context)
-                                                              .getText(
-                                                            'nd5a0f62' /* Al Multaqa_Issuance-Representa... */,
+                                                          valueOrDefault<
+                                                              String>(
+                                                            _model
+                                                                .uploadedFileUrl1,
+                                                            '-',
                                                           ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
@@ -2144,10 +2145,11 @@ Description */
                                                                     0.0,
                                                                     0.0),
                                                         child: Text(
-                                                          FFLocalizations.of(
-                                                                  context)
-                                                              .getText(
-                                                            '77an561u' /* Al Multaqa_Issuance-Representa... */,
+                                                          valueOrDefault<
+                                                              String>(
+                                                            _model
+                                                                .uploadedFileUrl2,
+                                                            '-',
                                                           ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
@@ -2388,10 +2390,11 @@ Description */
                                                                     0.0,
                                                                     0.0),
                                                         child: Text(
-                                                          FFLocalizations.of(
-                                                                  context)
-                                                              .getText(
-                                                            'ew2xq2q6' /* Al Multaqa_Issuance-Representa... */,
+                                                          valueOrDefault<
+                                                              String>(
+                                                            _model
+                                                                .uploadedFileUrl3,
+                                                            '-',
                                                           ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
@@ -2636,10 +2639,11 @@ Description */
                                                                       0.0,
                                                                       0.0),
                                                           child: Text(
-                                                            FFLocalizations.of(
-                                                                    context)
-                                                                .getText(
-                                                              'ya53dthx' /* Al Multaqa_Issuance-Representa... */,
+                                                            valueOrDefault<
+                                                                String>(
+                                                              _model
+                                                                  .uploadedFileUrl4,
+                                                              '-',
                                                             ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
@@ -2984,30 +2988,26 @@ Description */
                                         ),
                                       ),
                                     ),
-                                  if (currentUserDocument?.role ==
-                                      Role.ASSESSOR)
-                                    AuthUserStreamWidget(
-                                      builder: (context) => Column(
-                                        mainAxisSize: MainAxisSize.max,
-                                        children: [
-                                          if (_model.isPremiumPublish == true)
-                                            Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(
-                                                      24.0, 0.0, 24.0, 0.0),
-                                              child: Row(
-                                                mainAxisSize: MainAxisSize.max,
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment
-                                                        .spaceBetween,
-                                                children: [
-                                                  Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      '7mp85xqt' /* Review Express */,
-                                                    ),
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
+                                  Column(
+                                    mainAxisSize: MainAxisSize.max,
+                                    children: [
+                                      if (_model.isPremiumPublish == true)
+                                        Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  24.0, 0.0, 24.0, 0.0),
+                                          child: Row(
+                                            mainAxisSize: MainAxisSize.max,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceBetween,
+                                            children: [
+                                              Text(
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  '7mp85xqt' /* Review Express */,
+                                                ),
+                                                style:
+                                                    FlutterFlowTheme.of(context)
                                                         .titleSmall
                                                         .override(
                                                           fontFamily:
@@ -3017,22 +3017,24 @@ Description */
                                                               .secondaryText,
                                                           letterSpacing: 0.0,
                                                         ),
-                                                  ),
-                                                  Flexible(
-                                                    child: RichText(
-                                                      textScaler:
-                                                          MediaQuery.of(context)
-                                                              .textScaler,
-                                                      text: TextSpan(
-                                                        children: [
-                                                          TextSpan(
-                                                            text: FFLocalizations
-                                                                    .of(context)
+                                              ),
+                                              Flexible(
+                                                child: RichText(
+                                                  textScaler:
+                                                      MediaQuery.of(context)
+                                                          .textScaler,
+                                                  text: TextSpan(
+                                                    children: [
+                                                      TextSpan(
+                                                        text:
+                                                            FFLocalizations.of(
+                                                                    context)
                                                                 .getText(
-                                                              'ss5uqrdq' /* $ */,
-                                                            ),
-                                                            style: FlutterFlowTheme
-                                                                    .of(context)
+                                                          'ss5uqrdq' /* $ */,
+                                                        ),
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
                                                                 .bodyMedium
                                                                 .override(
                                                                   fontFamily:
@@ -3048,60 +3050,56 @@ Description */
                                                                       FontWeight
                                                                           .bold,
                                                                 ),
-                                                          ),
-                                                          TextSpan(
-                                                            text: FFLocalizations
-                                                                    .of(context)
-                                                                .getText(
-                                                              'hkpqbcsd' /* 19.9 */,
-                                                            ),
-                                                            style: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .titleLarge
-                                                                .override(
-                                                                  fontFamily:
-                                                                      'Plus Jakarta Sans',
-                                                                  fontSize:
-                                                                      18.0,
-                                                                  letterSpacing:
-                                                                      0.0,
-                                                                ),
-                                                          )
-                                                        ],
-                                                        style:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .bodyMedium
-                                                                .override(
-                                                                  fontFamily:
-                                                                      'Plus Jakarta Sans',
-                                                                  letterSpacing:
-                                                                      0.0,
-                                                                ),
                                                       ),
-                                                      maxLines: 2,
-                                                    ),
+                                                      TextSpan(
+                                                        text:
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .getText(
+                                                          'hkpqbcsd' /* 19.9 */,
+                                                        ),
+                                                        style: FlutterFlowTheme
+                                                                .of(context)
+                                                            .titleLarge
+                                                            .override(
+                                                              fontFamily:
+                                                                  'Plus Jakarta Sans',
+                                                              fontSize: 18.0,
+                                                              letterSpacing:
+                                                                  0.0,
+                                                            ),
+                                                      )
+                                                    ],
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'Plus Jakarta Sans',
+                                                          letterSpacing: 0.0,
+                                                        ),
                                                   ),
-                                                ],
+                                                  maxLines: 2,
+                                                ),
                                               ),
-                                            ),
-                                          Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    24.0, 0.0, 24.0, 0.0),
-                                            child: Row(
-                                              mainAxisSize: MainAxisSize.max,
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment
-                                                      .spaceBetween,
-                                              children: [
-                                                Text(
-                                                  FFLocalizations.of(context)
-                                                      .getText(
-                                                    'y4fh0150' /* Registration cost */,
-                                                  ),
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
+                                            ],
+                                          ),
+                                        ),
+                                      Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            24.0, 0.0, 24.0, 0.0),
+                                        child: Row(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            Text(
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                'y4fh0150' /* Registration cost */,
+                                              ),
+                                              style:
+                                                  FlutterFlowTheme.of(context)
                                                       .titleSmall
                                                       .override(
                                                         fontFamily:
@@ -3112,430 +3110,430 @@ Description */
                                                                 .secondaryText,
                                                         letterSpacing: 0.0,
                                                       ),
-                                                ),
-                                                Flexible(
-                                                  child: RichText(
-                                                    textScaler:
-                                                        MediaQuery.of(context)
-                                                            .textScaler,
-                                                    text: TextSpan(
-                                                      children: [
-                                                        TextSpan(
-                                                          text: FFLocalizations
-                                                                  .of(context)
-                                                              .getText(
-                                                            'vi9rbhbg' /* $ */,
-                                                          ),
-                                                          style: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .bodyMedium
-                                                              .override(
-                                                                fontFamily:
-                                                                    'Plus Jakarta Sans',
-                                                                color: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .primary,
-                                                                fontSize: 14.0,
-                                                                letterSpacing:
-                                                                    0.0,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .bold,
-                                                              ),
-                                                        ),
-                                                        TextSpan(
-                                                          text: FFLocalizations
-                                                                  .of(context)
-                                                              .getText(
-                                                            'uiu492u7' /* 99.9 */,
-                                                          ),
-                                                          style: TextStyle(
-                                                            color: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .primaryText,
-                                                            fontWeight:
-                                                                FontWeight.bold,
-                                                            fontSize: 18.0,
-                                                          ),
-                                                        )
-                                                      ],
+                                            ),
+                                            Flexible(
+                                              child: RichText(
+                                                textScaler:
+                                                    MediaQuery.of(context)
+                                                        .textScaler,
+                                                text: TextSpan(
+                                                  children: [
+                                                    TextSpan(
+                                                      text: FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        'vi9rbhbg' /* $ */,
+                                                      ),
                                                       style: FlutterFlowTheme
                                                               .of(context)
                                                           .bodyMedium
                                                           .override(
                                                             fontFamily:
                                                                 'Plus Jakarta Sans',
+                                                            color: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .primary,
+                                                            fontSize: 14.0,
                                                             letterSpacing: 0.0,
+                                                            fontWeight:
+                                                                FontWeight.bold,
                                                           ),
                                                     ),
-                                                    maxLines: 2,
-                                                  ),
-                                                ),
-                                              ],
-                                            ),
-                                          ),
-                                          StyledDivider(
-                                            thickness: 1.0,
-                                            indent: 24.0,
-                                            endIndent: 24.0,
-                                            color: FlutterFlowTheme.of(context)
-                                                .grey,
-                                            lineStyle: DividerLineStyle.dashed,
-                                          ),
-                                          if (_model.isPremiumPublish == true)
-                                            Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(
-                                                      24.0, 0.0, 24.0, 0.0),
-                                              child: Row(
-                                                mainAxisSize: MainAxisSize.max,
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment
-                                                        .spaceBetween,
-                                                children: [
-                                                  Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      'mjeoh5vi' /* Total */,
-                                                    ),
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .titleSmall
-                                                        .override(
-                                                          fontFamily:
-                                                              'Plus Jakarta Sans',
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .secondaryText,
-                                                          letterSpacing: 0.0,
-                                                        ),
-                                                  ),
-                                                  Flexible(
-                                                    child: RichText(
-                                                      textScaler:
-                                                          MediaQuery.of(context)
-                                                              .textScaler,
-                                                      text: TextSpan(
-                                                        children: [
-                                                          TextSpan(
-                                                            text: FFLocalizations
-                                                                    .of(context)
-                                                                .getText(
-                                                              'fdl4oa1f' /* $ */,
-                                                            ),
-                                                            style: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .bodyMedium
-                                                                .override(
-                                                                  fontFamily:
-                                                                      'Plus Jakarta Sans',
-                                                                  color: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .primary,
-                                                                  fontSize:
-                                                                      14.0,
-                                                                  letterSpacing:
-                                                                      0.0,
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .bold,
-                                                                ),
-                                                          ),
-                                                          TextSpan(
-                                                            text: FFLocalizations
-                                                                    .of(context)
-                                                                .getText(
-                                                              'guxxiufp' /*  119.8 */,
-                                                            ),
-                                                            style: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .titleLarge
-                                                                .override(
-                                                                  fontFamily:
-                                                                      'Plus Jakarta Sans',
-                                                                  fontSize:
-                                                                      18.0,
-                                                                  letterSpacing:
-                                                                      0.0,
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .bold,
-                                                                ),
-                                                          )
-                                                        ],
-                                                        style:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .bodyMedium
-                                                                .override(
-                                                                  fontFamily:
-                                                                      'Plus Jakarta Sans',
-                                                                  letterSpacing:
-                                                                      0.0,
-                                                                ),
-                                                      ),
-                                                      maxLines: 2,
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                          if (_model.isPremiumPublish == false)
-                                            Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(
-                                                      24.0, 0.0, 24.0, 0.0),
-                                              child: Row(
-                                                mainAxisSize: MainAxisSize.max,
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment
-                                                        .spaceBetween,
-                                                children: [
-                                                  Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      'n2lnoqx9' /* Total */,
-                                                    ),
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .titleSmall
-                                                        .override(
-                                                          fontFamily:
-                                                              'Plus Jakarta Sans',
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .secondaryText,
-                                                          letterSpacing: 0.0,
-                                                        ),
-                                                  ),
-                                                  Flexible(
-                                                    child: RichText(
-                                                      textScaler:
-                                                          MediaQuery.of(context)
-                                                              .textScaler,
-                                                      text: TextSpan(
-                                                        children: [
-                                                          TextSpan(
-                                                            text: FFLocalizations
-                                                                    .of(context)
-                                                                .getText(
-                                                              '57ic42v4' /* $ */,
-                                                            ),
-                                                            style: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .bodyMedium
-                                                                .override(
-                                                                  fontFamily:
-                                                                      'Plus Jakarta Sans',
-                                                                  color: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .primary,
-                                                                  fontSize:
-                                                                      14.0,
-                                                                  letterSpacing:
-                                                                      0.0,
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .bold,
-                                                                ),
-                                                          ),
-                                                          TextSpan(
-                                                            text: FFLocalizations
-                                                                    .of(context)
-                                                                .getText(
-                                                              'x54k6pk4' /* 99.9 */,
-                                                            ),
-                                                            style: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .titleLarge
-                                                                .override(
-                                                                  fontFamily:
-                                                                      'Plus Jakarta Sans',
-                                                                  fontSize:
-                                                                      18.0,
-                                                                  letterSpacing:
-                                                                      0.0,
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .bold,
-                                                                ),
-                                                          )
-                                                        ],
-                                                        style:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .bodyMedium
-                                                                .override(
-                                                                  fontFamily:
-                                                                      'Plus Jakarta Sans',
-                                                                  letterSpacing:
-                                                                      0.0,
-                                                                ),
-                                                      ),
-                                                      maxLines: 2,
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                          Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    24.0, 0.0, 24.0, 0.0),
-                                            child: Row(
-                                              mainAxisSize: MainAxisSize.max,
-                                              children: [
-                                                Expanded(
-                                                  child: Padding(
-                                                    padding:
-                                                        EdgeInsetsDirectional
-                                                            .fromSTEB(0.0, 50.0,
-                                                                0.0, 0.0),
-                                                    child: FFButtonWidget(
-                                                      onPressed: () async {
-                                                        await ProjectRecord
-                                                            .collection
-                                                            .doc()
-                                                            .set({
-                                                          ...createProjectRecordData(
-                                                            name: _model
-                                                                .userNameTextFieldTextController1
-                                                                .text,
-                                                            projectType: functions
-                                                                .getProjectTypeReference(
-                                                                    _model
-                                                                        .dropDownValue1),
-                                                            methodology: functions
-                                                                .getMethodologyReference(
-                                                                    _model
-                                                                        .dropDownValue2),
-                                                            status: functions
-                                                                .getStatusReference(
-                                                                    _model
-                                                                        .dropDownValue3),
-                                                            location: functions
-                                                                .getLocationReference(
-                                                                    _model
-                                                                        .dropDownValue4),
-                                                            region: functions
-                                                                .getRegionReference(
-                                                                    _model
-                                                                        .dropDownValue5),
-                                                            creditingStart: _model
-                                                                .calendarSelectedDay1
-                                                                ?.start,
-                                                            creditingEnd: _model
-                                                                .calendarSelectedDay2
-                                                                ?.start,
-                                                            description: _model
-                                                                .userNameTextFieldTextController3
-                                                                .text,
-                                                            price: double
-                                                                .tryParse(_model
-                                                                    .estimatedTextFieldTextController
-                                                                    .text),
-                                                            issuedACU: 0,
-                                                            retiredACU: 0,
-                                                            createdBy:
-                                                                currentUserReference,
-                                                            assessor: functions
-                                                                .getUserReference(
-                                                                    _model
-                                                                        .dropDownValue6),
-                                                            allTimeEstimatedACU:
-                                                                int.tryParse(_model
-                                                                    .estimatedTextFieldTextController
-                                                                    .text),
-                                                            premiumPublish: _model
-                                                                .isPremiumPublish,
-                                                            isVerified: false,
-                                                            verraId: _model
-                                                                .userNameTextFieldTextController1
-                                                                .text,
-                                                            petraAddress: _model
-                                                                .textController6
-                                                                .text,
-                                                          ),
-                                                          ...mapToFirestore(
-                                                            {
-                                                              'documents': functions.setDocumentsFunction(
-                                                                  _model
-                                                                      .uploadDocument1
-                                                                      ?.reference,
-                                                                  _model
-                                                                      .uploadDocument2
-                                                                      ?.reference,
-                                                                  _model
-                                                                      .uploadDocument3
-                                                                      ?.reference,
-                                                                  _model
-                                                                      .uploadDocument4
-                                                                      ?.reference),
-                                                            },
-                                                          ),
-                                                        });
-
-                                                        await currentUserReference!
-                                                            .update(
-                                                                createUserRecordData(
-                                                          role: Role.DEVELOPER,
-                                                        ));
-                                                        context.safePop();
-                                                      },
+                                                    TextSpan(
                                                       text: FFLocalizations.of(
                                                               context)
                                                           .getText(
-                                                        'whke5ts1' /* Submit For Review */,
+                                                        'uiu492u7' /* 99.9 */,
                                                       ),
-                                                      options: FFButtonOptions(
-                                                        height: 56.0,
-                                                        padding:
-                                                            EdgeInsetsDirectional
-                                                                .fromSTEB(
-                                                                    24.0,
-                                                                    16.0,
-                                                                    24.0,
-                                                                    16.0),
-                                                        iconPadding:
-                                                            EdgeInsetsDirectional
-                                                                .fromSTEB(
-                                                                    0.0,
-                                                                    0.0,
-                                                                    0.0,
-                                                                    0.0),
+                                                      style: TextStyle(
                                                         color:
                                                             FlutterFlowTheme.of(
                                                                     context)
-                                                                .primary,
-                                                        textStyle:
+                                                                .primaryText,
+                                                        fontWeight:
+                                                            FontWeight.bold,
+                                                        fontSize: 18.0,
+                                                      ),
+                                                    )
+                                                  ],
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily:
+                                                            'Plus Jakarta Sans',
+                                                        letterSpacing: 0.0,
+                                                      ),
+                                                ),
+                                                maxLines: 2,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                      StyledDivider(
+                                        thickness: 1.0,
+                                        indent: 24.0,
+                                        endIndent: 24.0,
+                                        color:
+                                            FlutterFlowTheme.of(context).grey,
+                                        lineStyle: DividerLineStyle.dashed,
+                                      ),
+                                      if (_model.isPremiumPublish == true)
+                                        Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  24.0, 0.0, 24.0, 0.0),
+                                          child: Row(
+                                            mainAxisSize: MainAxisSize.max,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceBetween,
+                                            children: [
+                                              Text(
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'mjeoh5vi' /* Total */,
+                                                ),
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .titleSmall
+                                                        .override(
+                                                          fontFamily:
+                                                              'Plus Jakarta Sans',
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .secondaryText,
+                                                          letterSpacing: 0.0,
+                                                        ),
+                                              ),
+                                              Flexible(
+                                                child: RichText(
+                                                  textScaler:
+                                                      MediaQuery.of(context)
+                                                          .textScaler,
+                                                  text: TextSpan(
+                                                    children: [
+                                                      TextSpan(
+                                                        text:
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .getText(
+                                                          'fdl4oa1f' /* $ */,
+                                                        ),
+                                                        style:
                                                             FlutterFlowTheme.of(
                                                                     context)
-                                                                .titleSmall
+                                                                .bodyMedium
                                                                 .override(
                                                                   fontFamily:
                                                                       'Plus Jakarta Sans',
-                                                                  color: Colors
-                                                                      .white,
+                                                                  color: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .primary,
+                                                                  fontSize:
+                                                                      14.0,
                                                                   letterSpacing:
                                                                       0.0,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .bold,
                                                                 ),
-                                                        elevation: 0.0,
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(12.0),
                                                       ),
-                                                    ),
+                                                      TextSpan(
+                                                        text:
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .getText(
+                                                          'guxxiufp' /*  119.8 */,
+                                                        ),
+                                                        style: FlutterFlowTheme
+                                                                .of(context)
+                                                            .titleLarge
+                                                            .override(
+                                                              fontFamily:
+                                                                  'Plus Jakarta Sans',
+                                                              fontSize: 18.0,
+                                                              letterSpacing:
+                                                                  0.0,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .bold,
+                                                            ),
+                                                      )
+                                                    ],
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'Plus Jakarta Sans',
+                                                          letterSpacing: 0.0,
+                                                        ),
                                                   ),
+                                                  maxLines: 2,
                                                 ),
-                                              ],
-                                            ),
+                                              ),
+                                            ],
                                           ),
-                                        ]
-                                            .divide(SizedBox(height: 12.0))
-                                            .addToStart(SizedBox(height: 20.0))
-                                            .addToEnd(SizedBox(height: 20.0)),
+                                        ),
+                                      if (_model.isPremiumPublish == false)
+                                        Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  24.0, 0.0, 24.0, 0.0),
+                                          child: Row(
+                                            mainAxisSize: MainAxisSize.max,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceBetween,
+                                            children: [
+                                              Text(
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'n2lnoqx9' /* Total */,
+                                                ),
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .titleSmall
+                                                        .override(
+                                                          fontFamily:
+                                                              'Plus Jakarta Sans',
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .secondaryText,
+                                                          letterSpacing: 0.0,
+                                                        ),
+                                              ),
+                                              Flexible(
+                                                child: RichText(
+                                                  textScaler:
+                                                      MediaQuery.of(context)
+                                                          .textScaler,
+                                                  text: TextSpan(
+                                                    children: [
+                                                      TextSpan(
+                                                        text:
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .getText(
+                                                          '57ic42v4' /* $ */,
+                                                        ),
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'Plus Jakarta Sans',
+                                                                  color: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .primary,
+                                                                  fontSize:
+                                                                      14.0,
+                                                                  letterSpacing:
+                                                                      0.0,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .bold,
+                                                                ),
+                                                      ),
+                                                      TextSpan(
+                                                        text:
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .getText(
+                                                          'x54k6pk4' /* 99.9 */,
+                                                        ),
+                                                        style: FlutterFlowTheme
+                                                                .of(context)
+                                                            .titleLarge
+                                                            .override(
+                                                              fontFamily:
+                                                                  'Plus Jakarta Sans',
+                                                              fontSize: 18.0,
+                                                              letterSpacing:
+                                                                  0.0,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .bold,
+                                                            ),
+                                                      )
+                                                    ],
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'Plus Jakarta Sans',
+                                                          letterSpacing: 0.0,
+                                                        ),
+                                                  ),
+                                                  maxLines: 2,
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            24.0, 50.0, 24.0, 0.0),
+                                        child: Row(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.start,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.center,
+                                          children: [
+                                            FlutterFlowIconButton(
+                                              borderColor: Colors.transparent,
+                                              borderRadius: 20.0,
+                                              borderWidth: 1.0,
+                                              buttonSize: 40.0,
+                                              icon: Icon(
+                                                Icons.arrow_back,
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primary,
+                                                size: 24.0,
+                                              ),
+                                              onPressed: () async {
+                                                await _model.pageViewController
+                                                    ?.previousPage(
+                                                  duration: Duration(
+                                                      milliseconds: 300),
+                                                  curve: Curves.ease,
+                                                );
+                                              },
+                                            ),
+                                            Expanded(
+                                              child: FFButtonWidget(
+                                                onPressed: () async {
+                                                  await ProjectRecord.collection
+                                                      .doc()
+                                                      .set({
+                                                    ...createProjectRecordData(
+                                                      name: _model
+                                                          .userNameTextFieldTextController2
+                                                          .text,
+                                                      projectType: functions
+                                                          .getProjectTypeReference(
+                                                              _model
+                                                                  .dropDownValue1),
+                                                      methodology: functions
+                                                          .getMethodologyReference(
+                                                              _model
+                                                                  .dropDownValue2),
+                                                      status: functions
+                                                          .getStatusReference(
+                                                              _model
+                                                                  .dropDownValue3),
+                                                      location: functions
+                                                          .getLocationReference(
+                                                              _model
+                                                                  .dropDownValue4),
+                                                      region: functions
+                                                          .getRegionReference(
+                                                              _model
+                                                                  .dropDownValue5),
+                                                      creditingStart: _model
+                                                          .calendarSelectedDay1
+                                                          ?.start,
+                                                      creditingEnd: _model
+                                                          .calendarSelectedDay2
+                                                          ?.start,
+                                                      description: _model
+                                                          .userNameTextFieldTextController3
+                                                          .text,
+                                                      price: double.tryParse(_model
+                                                          .userNameTextFieldTextController4
+                                                          .text),
+                                                      issuedACU: 0,
+                                                      retiredACU: 0,
+                                                      createdBy:
+                                                          currentUserReference,
+                                                      assessor: functions
+                                                          .getUserReference(_model
+                                                              .dropDownValue6),
+                                                      allTimeEstimatedACU:
+                                                          int.tryParse(_model
+                                                              .estimatedTextFieldTextController
+                                                              .text),
+                                                      premiumPublish: _model
+                                                          .isPremiumPublish,
+                                                      isVerified: false,
+                                                      verraId: _model
+                                                          .userNameTextFieldTextController1
+                                                          .text,
+                                                      petraAddress: _model
+                                                          .textController6.text,
+                                                    ),
+                                                    ...mapToFirestore(
+                                                      {
+                                                        'documents': functions.setDocumentsFunction(
+                                                            _model
+                                                                .uploadDocument1
+                                                                ?.reference,
+                                                            _model
+                                                                .uploadDocument2
+                                                                ?.reference,
+                                                            _model
+                                                                .uploadDocument3
+                                                                ?.reference,
+                                                            _model
+                                                                .uploadDocument4
+                                                                ?.reference),
+                                                      },
+                                                    ),
+                                                  });
+
+                                                  await currentUserReference!
+                                                      .update(
+                                                          createUserRecordData(
+                                                    role: Role.DEVELOPER,
+                                                  ));
+                                                  context.safePop();
+                                                },
+                                                text:
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                  'whke5ts1' /* Submit For Review */,
+                                                ),
+                                                options: FFButtonOptions(
+                                                  height: 40.0,
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(24.0, 16.0,
+                                                          24.0, 16.0),
+                                                  iconPadding:
+                                                      EdgeInsetsDirectional
+                                                          .fromSTEB(0.0, 0.0,
+                                                              0.0, 0.0),
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .primary,
+                                                  textStyle:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .titleSmall
+                                                          .override(
+                                                            fontFamily:
+                                                                'Plus Jakarta Sans',
+                                                            color: Colors.white,
+                                                            letterSpacing: 0.0,
+                                                          ),
+                                                  elevation: 0.0,
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          12.0),
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
                                       ),
-                                    ),
+                                    ]
+                                        .divide(SizedBox(height: 12.0))
+                                        .addToStart(SizedBox(height: 20.0))
+                                        .addToEnd(SizedBox(height: 20.0)),
+                                  ),
                                 ]
                                     .divide(SizedBox(height: 20.0))
                                     .addToStart(SizedBox(height: 50.0)),

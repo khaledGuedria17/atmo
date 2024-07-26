@@ -385,7 +385,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                               ),
                             ),
                           ),
-                        if (currentUserDocument?.role == Role.HOLDER)
+                        if (currentUserDocument?.role == Role.DEVELOPER)
                           Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 24.0, 0.0, 24.0, 0.0),

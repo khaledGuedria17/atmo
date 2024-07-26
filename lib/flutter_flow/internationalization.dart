@@ -448,11 +448,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': '',
       'fr': '',
     },
-    'q69v5nti': {
-      'en': 'Status',
-      'es': '',
-      'fr': '',
-    },
     'gmc1eghx': {
       'en': 'Crediting Period',
       'es': '',
@@ -1530,11 +1525,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': '',
       'fr': '',
     },
-    'nd5a0f62': {
-      'en': 'Al Multaqa_Issuance-Representation-Single-PP-v4.3.pdf',
-      'es': '',
-      'fr': '',
-    },
     'csyzae8d': {
       'en': 'VCS REGISTRATION DOCUMENTS',
       'es': '',
@@ -1542,11 +1532,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'pp08z2vw': {
       'en': 'Upload PDF',
-      'es': '',
-      'fr': '',
-    },
-    '77an561u': {
-      'en': 'Al Multaqa_Issuance-Representation-Single-PP-v4.3.pdf',
       'es': '',
       'fr': '',
     },
@@ -1560,11 +1545,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': '',
       'fr': '',
     },
-    'ew2xq2q6': {
-      'en': 'Al Multaqa_Issuance-Representation-Single-PP-v4.3.pdf',
-      'es': '',
-      'fr': '',
-    },
     '9u2zbw2z': {
       'en': 'VCS OTHER DOCUMENTS',
       'es': '',
@@ -1572,11 +1552,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'n746kjet': {
       'en': 'Upload PDF',
-      'es': '',
-      'fr': '',
-    },
-    'ya53dthx': {
-      'en': 'Al Multaqa_Issuance-Representation-Single-PP-v4.3.pdf',
       'es': '',
       'fr': '',
     },

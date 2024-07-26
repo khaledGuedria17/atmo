@@ -59,8 +59,8 @@ class _HomeWidgetState extends State<HomeWidget> {
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         floatingActionButton: Visibility(
-          visible: (currentUserDocument?.role == Role.HOLDER) ||
-              (currentUserDocument?.role == Role.DEVELOPER),
+          visible: (currentUserDocument?.role != Role.ASSESSOR) &&
+              (valueOrDefault<bool>(currentUserDocument?.kyc, false) == true),
           child: AuthUserStreamWidget(
             builder: (context) => FloatingActionButton.extended(
               onPressed: () async {
